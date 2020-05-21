@@ -1,0 +1,91 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/blog.css">
+    
+    <title>Roman blog</title>
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-menu pure-menu-horizontal pure-u-1">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/" class="pure-menu-link">What I wrote</a></li>
+                <li class="pure-menu-item"><a href="/about.html" class="pure-menu-link">Who I am</a></li>
+                <li class="pure-menu-item"><a href="/projects.html" class="pure-menu-link">What I did so far</a></li>
+                <li class="pure-menu-item"><a href="/motivate.html" class="pure-menu-link">Motivate yourself</a></li>
+            </ul>
+        </div>
+
+    
+        <div class="content pure-u-1 pure-u-md-3-4">
+
+
+            <div class="post">
+                <section class="post">
+                    <h1><a href="ssl101.html">SSL and HTTPS for webpages 101</a></h1>
+                        <p> <p>You do not need to know the cryptography subject to setup secure page. But a certificate alone does not encrypt your traffic. You would need 3 things for HTTPS to work.</p>
+
+                    <h2>1. Secure protocol</h2>
+                    <p>Traditionally it is still refered to as SSL, but technically SSL is outdated and not used anymore. Nowadays it is <strong>TLS</strong>. Mainly TLS v 1.2 now and 1.3 coming (TLSv1 and TLSv1.1 not used much and is being phased out). Your browser would establish connection to server over this protocol.
+                    I would suggest to make this a first step to enable your server accept https connection over port 443 (default).
+                    In Apache enable SSLEngine and configure virtual host to listen on port 443.</p>
+                    
+                    <p>Traffic is ready to go via https protocol but there might be weak ciphers enabled and no certificate.</p>
+                
+                    <h2>2. Configure cipher settings</h2>
+                    <p>At the very least must disable weak ciphers such as RC4, MD5 etc. Enable onyl strong ciphersuites. I found this interesting tool on SO <a href="https://stackoverflow.com/a/43197268">Mozilla SSL Configuration Generator</a></p>
+                    <p>Modern browsers will not even allow to view webpage if no modern secure ciphers are enabled.</p>
+                
+                    <h2>3. Certificate</h2>
+                    <p>Without certificate data will not pass over TLS protocol and your configured ciphersuites. You can either use self-signed cert or request one for free from Letsencrypt. Or even buy from any SSL certs provider.</p>
+                    <p>Certificate and a key are stored on your web server in the form of files (a simple scenario). Certificate can be signed by trusted CA, and browsers know about them, that way your browser will trust them and will not show any warnings.
+                    Using link in step 2, see where to put your certificates to enable them in your vhost config.</p>
+
+                    <h2>Testing</h2>
+                    <p>You must absolutely test and re-test your webpages. This way you will ensure your website does not have insecure configuration and up to current security standards. Below links to popular SSL Labs, and other tools.</p>
+                    <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="https://www.ssllabs.com/ssltest/">https://www.ssllabs.com/ssltest/</a></li>
+                    <li class="pure-menu-item"><a href="https://ssldecoder.org/">https://ssldecoder.org/</a></li>
+                    </ul>
+                    <h2>TLDR Conclusion</h2>
+                    <p>To secure your webpage with HTTPS you must enable TLS on webserver, configure secure ciphers and install SSL certificate.</p>
+                    <h3>Further read</h3>
+                    <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="https://thehackernews.com/2015/10/nsa-crack-encryption.html">How NSA successfully Broke Trillions of Encrypted Connections</a></li>
+                    <li class="pure-menu-item"><a href="https://weakdh.org/imperfect-forward-secrecy-ccs15.pdf">Imperfect Forward Secrecy: How Diffie-Hellman Fails in Practice</a></li>
+                    <li class="pure-menu-item"><a href="https://weakdh.org/sysadmin.html">Guide to Deploying Diffie-Hellman for TLS</a></li>
+                    </ul> </p>
+
+                <p class="content-subhead">Roman, Date: 2018-09-11 14:00:00 UTC</p>
+                </section>
+            </div>
+
+            <div class="post">
+                <section class="post">
+                    <h1><a href="siem1.html">SIEM solution and PCI scope. Why scoping environment is important</a></h1>
+                        <p> <p>SIEM stands for Security Information and Event Management. Log management and notifications is a part of PCI DSS requirements and not optional in case of SAQ D. SIEM would gather user (staff) activity from computers, servers and network. Logs can be used in event of breach to rebuild a picture what was happening on the network.</p>
+                        <p>An example: someone can install a virus on your network on purpose to steal data. With SIEM it is possible to narrow down who has done it or more like whose credentials were used for that.</p>
+                        <p>SIEM integration is quite sophisticated and requires a lot of time at the beginning. It is not type of "setup and forget", a continuous maintenance and daily monitoring+review would be needed.</p>
+                        <p>Different vendors have various licensing models: either per number of computers or amount of activity on the network. There are also subscription model or perpetual licence.</p>
+                        <p>The more computers you have on your network the more activity will be logged. However it is possible to minimize this: computers having access to your CDE can be moved into a separate network which would be called "PCI environment" (or CDE). Computers (or staff) who do not need to have access to the system which holds card data, they can be considered outside of scope. The process is called: segmentation.</p>
+                        <p>Reducing the scope, or if put this different way - having less computers with access to your business system, would mean:
+                            <ul>
+                                <li>Lower SIEM solution cost</li>
+                                <li>Less activity logged which means less to review daily, less alerts and easier management</li>
+                                <li>Lower risk of breach</li>
+                            </ul>
+                        </p>
+                        <p>Proper scoping of environment would not only cost cheaper, but would also involve less maintenance and reduce the risk for your business.</p> </p>
+
+                <p class="content-subhead">Roman, Date: 2016-05-23 14:00:00 UTC</p>
+                </section>
+            </div>
+
+        </div>
+    
+    </div>
+</body>
+</html>

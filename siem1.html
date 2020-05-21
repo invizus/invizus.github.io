@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/blog.css">
+    
+    <title>Roman blog</title>
+</head>
+<body>
+    <div class="pure-g">
+        <div class="pure-menu pure-menu-horizontal pure-u-1">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/" class="pure-menu-link">What I wrote</a></li>
+                <li class="pure-menu-item"><a href="/about.html" class="pure-menu-link">Who I am</a></li>
+                <li class="pure-menu-item"><a href="/projects.html" class="pure-menu-link">What I did so far</a></li>
+                <li class="pure-menu-item"><a href="/motivate.html" class="pure-menu-link">Motivate yourself</a></li>
+            </ul>
+        </div>
+
+    
+        <div class="content pure-u-1 pure-u-md-3-4">
+
+
+            <div class="post">
+                <section class="post">
+                    <h1>SIEM solution and PCI scope. Why scoping environment is important</h1>
+                        <p> <p>SIEM stands for Security Information and Event Management. Log management and notifications is a part of PCI DSS requirements and not optional in case of SAQ D. SIEM would gather user (staff) activity from computers, servers and network. Logs can be used in event of breach to rebuild a picture what was happening on the network.</p>
+                        <p>An example: someone can install a virus on your network on purpose to steal data. With SIEM it is possible to narrow down who has done it or more like whose credentials were used for that.</p>
+                        <p>SIEM integration is quite sophisticated and requires a lot of time at the beginning. It is not type of "setup and forget", a continuous maintenance and daily monitoring+review would be needed.</p>
+                        <p>Different vendors have various licensing models: either per number of computers or amount of activity on the network. There are also subscription model or perpetual licence.</p>
+                        <p>The more computers you have on your network the more activity will be logged. However it is possible to minimize this: computers having access to your CDE can be moved into a separate network which would be called "PCI environment" (or CDE). Computers (or staff) who do not need to have access to the system which holds card data, they can be considered outside of scope. The process is called: segmentation.</p>
+                        <p>Reducing the scope, or if put this different way - having less computers with access to your business system, would mean:
+                            <ul>
+                                <li>Lower SIEM solution cost</li>
+                                <li>Less activity logged which means less to review daily, less alerts and easier management</li>
+                                <li>Lower risk of breach</li>
+                            </ul>
+                        </p>
+                        <p>Proper scoping of environment would not only cost cheaper, but would also involve less maintenance and reduce the risk for your business.</p> </p>
+
+                <p class="content-subhead">Roman, Date: 2016-05-23 14:00:00 UTC</p>
+                </section>
+            </div>
+
+        </div>
+    
+    </div>
+</body>
+</html>

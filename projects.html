@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <title>Roman</title>
+</head>
+<body>
+
+    <div class="pure-g">
+
+        <div class="pure-menu pure-menu-horizontal pure-u-1">
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="/" class="pure-menu-link">What I wrote</a></li>
+                <li class="pure-menu-item"><a href="/about.html" class="pure-menu-link">Who I am</a></li>
+                <li class="pure-menu-item"><a href="/projects.html" class="pure-menu-link">What I did so far</a></li>
+                <li class="pure-menu-item"><a href="/motivate.html" class="pure-menu-link">Motivate yourself</a></li>
+            </ul>
+        </div>
+    
+
+        <div class="content pure-u-1 pure-u-md-3-4">
+            <div class="post">
+                <section class="post">
+			<h1>Coded</h1>
+			<h2>Discord skills bot</h2>
+			<p>To motivate learning or getting better at anything, I hacked together this bot in a RPG style game. Anytime I learned something, I can write:</p>
+			<code>!skill Developer +10</code>
+			<p>Then it will add 10 experience points to my profession "Developer" and writes it into JSON file under my username. Another command is to display my professions, accumulated experience and level.</p>
+<pre>
+!skills
+
+Users's profession list:
+Developer level: 6 Exp: 91/128
+DevOps level: 5 Exp: 61/64
+</pre>
+			<p>Level is not stored in json file, there is no point. When <code>!skills</code> command is called, level is calculated from experience using log(2) function. Technologies used here: discord.py framework, JSON files.</p>
+
+			<h2>This website</h2>
+			This is static generated text only html's. There is a backend somewhere written in Python which would accept REST API calls, will store data in MySQL and would then generate static HTML pages out of there. Technologies used: Flask, Jinja2 templates, YAML. And some Javascript and JSON on the front end.
+
+			<h2>Repository</h2>
+			Projects mentioned here can be found on my Github.
+			<a href="https://github.com/invizus">GitHub</a>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
