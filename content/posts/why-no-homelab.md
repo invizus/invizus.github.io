@@ -1,7 +1,7 @@
 ---
 title: "Thoughts on having my own homelab"
 date: 2022-10-23T11:00:19+01:00
-draft: true
+draft: false
 ---
 A lot of folks in /r/homelab have their own homelab at their homes.
 Servers, storage, patch panels, and so on.
