@@ -1,48 +1,37 @@
 ---
 title: "About"
-date: 2022-10-05T22:49:45+01:00
+date: 2025-06-26T22:49:45+01:00
 draft: false
 ---
 
-Hi there. I am Linux system admin, DYI beginner and as much as I hate
-talking about food, I like to cook and try new things. I also read sometimes,
-I read normal books, a bit about science and sometimes blog posts.
+I am a Linux sysadmin and devops. Sometimes a junior developer.
 
 ## Tech
-I administer Linux and I think Linux is great for scripting, automating things,
-doing infrastructure as code. So that is what I do.
+General:
 - Linux
-- Ansible, Terraform
-- AWS, GCP
+- Firewalls
 
-Then I like doing observability and security:
-- Firewalls, iptables/nftables
+Infrastructure:
+- IaC (ansible, terraform)
+- Kubernetes, Docker
+- Cloud: AWS, GCP, Cloudflare
+- Netwokrking, servers, datacentre
+
+Observability:
 - Elasticsearch/elastalert
-- prometheus, grafana
-- VPN
+- Prometheus, Grafana, Loki
 
-Obviously, also:
-- git, LAMP stack, python
+Development:
+- Scripting (python, bash)
+- Programming (python, Golang)
 
-As a sysadmin I also have (and like) to administer server hardware, document things.
-Netowrking (switches, firewalls, vlans). I have designed and setup datacentre
-infrastructure as well.
 
 ## Personal life
-I happen to have interests outsife of computers too.
+Full time: husband and father.
 
-Fancy knives and pans for cooking? Check. Does food come tasty? Well, ask my wife, she
-does not go to kitchen often! :D
+Little less: books, cooking, healthy lifestyle.
 
-Fixing and riding my bicycle. Just a training for a sportbike.
-
-Various tastes in music. IDM, pop, metal, rave. I don't care.
-
-I like DYI same way I like writing my scripts. Sometimes... finished.
-
-Did I say I read? I mean, normal books, also sometimes articles about space and science.
-
-I am always open to new things.
+Even less: cars, F1, astronomy, DIY.
 
 ## Links
 https://github.com/invizus
