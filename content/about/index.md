@@ -24,7 +24,7 @@ Observability:
 Development:
 - Scripting (python, bash)
 - Programming (python, Golang)
-
+- CI/CD
 
 ## Personal life
 Full time: husband and father.
