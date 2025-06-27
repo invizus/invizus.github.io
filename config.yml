@@ -8,6 +8,10 @@ menu:
     name: About me
     url: /about/
     weight: 10
+  - identifier: notes
+    name: Notes
+    url: /notes/
+    weight: 14
   - identifier: motivate
     name: Motivate yourself
     url: /motivate/
